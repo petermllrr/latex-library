@@ -1,0 +1,61 @@
+\documentclass{article}
+
+\begin{document}
+
+\section*{Selecting Font Styles}
+
+\bigskip\noindent\textrm{Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+nec quam finibus, pharetra felis quis, pretium tortor. Etiam quis libero quam.
+Suspendisse vel fringilla massa. Pellentesque luctus turpis at tellus auctor.}
+
+\bigskip\noindent\textsf{Ut fringilla lectus non nulla dapibus, ac maximus orci
+iaculis. Proin lectus erat, luctus non neque eu, malesuada tempor massa. Aliquam
+erat volutpat. Fusce vitae consequat odio. Nulla eget ligula facilisis, mollis
+lacus non, eleifend ante.}
+
+\bigskip\noindent\texttt{Sed vulputate sollicitudin erat, sit amet ultrices
+tortor suscipit sit amet. Nullam et enim et mauris malesuada rutrum vel quis
+dolor. Phasellus dapibus sollicitudin libero a luctus.} 
+
+\bigskip\noindent\textit{Suspendisse vel fringilla massa. Pellentesque luctus
+turpis at tellus auctor, id rutrum lorem viverra. Lorem ipsum dolor sit amet,
+consectetur adipiscing elit. Nullam nec quam finibus, pharetra felis quis,
+pretium tortor.}
+
+\bigskip\noindent\textmd{Ut fringilla lectus non nulla dapibus, ac maximus orci
+iaculis. Proin lectus erat, luctus non neque eu, malesuada tempor massa. Aliquam
+erat volutpat. Fusce vitae consequat odio. Nulla eget ligula facilisis, mollis
+lacus non, eleifend ante.}
+
+\bigskip\noindent\textbf{Ut fringilla lectus non nulla dapibus, ac maximus orci
+iaculis. Proin lectus erat, luctus non neque eu, malesuada tempor massa. Aliquam
+erat volutpat. Fusce vitae consequat odio.}
+
+\bigskip\noindent\textsc{Sed vulputate sollicitudin erat, sit amet ultrices
+tortor suscipit sit amet. Nullam et enim et mauris malesuada.} 
+
+\bigskip
+
+\begin{verbatim}
+class Example {
+    public static void main(String[] args) {
+        /* A code example */
+        String[][] output = new String[3][3];
+        for (int col = 0; col < input.length; col++) {
+            for (int row = 0; row < input[0].length; row++) {
+                output[col][row] = input[col][row];
+            }
+        }
+    }
+}
+\end{verbatim}
+
+\noindent\fontfamily{ptm}\selectfont You can change the font used in a paragraph
+by using \\
+\texttt{\textbackslash fontfamily\{...\}\textbackslash selectfont}
+
+\bigskip\noindent To change fonts for  whole document, use
+\texttt{\textbackslash renewcommand\{\textbackslash rmdefault\}\{...\}} in the
+header of the document.
+
+\end{document}

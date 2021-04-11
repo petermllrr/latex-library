@@ -1,0 +1,57 @@
+\documentclass{article}
+
+\begin{document}
+
+\section*{Using LaTex NFSS Core Fonts}
+
+\LaTeX\ provides basic core fonts, called the NFSS collection. The easiest and
+recommended way to use them is to simply load them by package name (even though
+they are included in \TeX).
+
+\medskip
+
+\begin{tabular}{ | l | l l l l |}
+    \hline
+    package     & roman     & sans serif    & typewriter      & formulas \\
+    \hline & & & &\\
+    \hline \\
+\end{tabular}
+
+\bigskip\noindent See the documentation \\
+\texttt{http://ctan.ebinger.cc/tex-archive/macros/latex/required/psnfss/psnfss2e.pdf}
+
+\begin{verbatim}
+\renewcommand{\rmdefault}{...} % Sets default (serif) font
+\renewcommand{\sfdefault}{...} % Sets sans-serif font
+\renewcommand{\ttdefault}{...} % Sets monospaced font
+\end{verbatim}
+
+\renewcommand{\rmdefault}{ptm}
+\renewcommand{\sfdefault}{phv}
+\renewcommand{\ttdefault}{pcr}
+
+\noindent\textrm{Serif font: lorem ipsum dolor sit amet, consectetur adipiscing
+elit. Nullam nec quam finibus, pharetra felis quis, pretium tortor. Etiam quis
+libero quam. Suspendisse vel fringilla massa. Pellentesque luctus turpis at
+tellus auctor.}
+
+\bigskip\noindent\textsf{Sans serif font: Suspendisse vel fringilla massa.
+Pellentesque luctus turpis at tellus auctor, id rutrum lorem viverra. Lorem
+ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec quam finibus,
+pharetra felis quis, pretium tortor.}
+
+\begin{verbatim}
+class MonoSpacedFont {
+    public static void main(String[] args) {
+        /* A code example */
+        String[][] output = new String[3][3];
+        for (int col = 0; col < input.length; col++) {
+            for (int row = 0; row < input[0].length; row++) {
+                output[col][row] = input[col][row];
+            }
+        }
+    }
+}
+\end{verbatim}
+
+\end{document}

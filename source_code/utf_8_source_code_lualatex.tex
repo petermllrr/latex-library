@@ -1,0 +1,74 @@
+\documentclass{article}
+
+\usepackage{fontspec}
+\usepackage{listings}
+\usepackage{FiraMono}
+\usepackage{xcolor}
+
+\setmonofont{FiraMono}
+\lstset{basicstyle = \small\ttfamily}
+
+\begin{document}
+
+\section*{UTF-8 source code with LuaLaTex}
+
+\noindent If you want to use special UTF-8 characters in your source code, you
+need to setup a custom monospace font that includes the needed special
+characters and use LuaLaTex as the font rendering engine. \texttt{\textbackslash
+setmonofont\{...\}} is better than using \texttt{\textbackslash
+newfontfamily\textbackslash myFontFamily\{...\}} because \\
+\texttt{\textbackslash setmonofont\{...\}} also catches certain special
+characters.
+
+\medskip
+
+\begin{lstlisting}[language = java]
+// Draw bottom border
+for (int col = 0; col < input.length - 1; col++) {
+    if (col == 0) {
+        output[col][input[0].length - 1] = "┗";
+    } else if (col > 0 && col < input.length - 1) { 
+        if (input[col][input[0].length - 2] == "▉") {
+            output[col][input[0].length - 1] = "┻";
+        } else {
+            output[col][input[0].length - 1] = "━";
+        }  
+    }
+}
+\end{lstlisting}
+
+
+\medskip\noindent You sometimes need to manually set the line-height of the
+\texttt{listings} font to avoid white background gaps when using tall special
+characters:
+
+\medskip
+
+\lstset{basicstyle = \fontsize{9}{1.4em}\ttfamily,
+    backgroundcolor=\color[rgb]{0.95, 0.95, 0.97},
+    keywordstyle = \color{magenta},
+    commentstyle = \color[rgb]{0, 0.6, 0},
+    identifierstyle = \color{black},
+    stringstyle = \color[rgb]{0.58, 0, 0.82},
+    numbers = left,
+    numberstyle = \small\ttfamily\color[rgb]{0.7, 0.7, 0.7},
+    showstringspaces = false,
+    frame = single,
+    framerule = 0pt}
+
+\begin{lstlisting}[language = java]
+// Draw bottom border
+for (int col = 0; col < input.length - 1; col++) {
+    if (col == 0) {
+        output[col][input[0].length - 1] = "┗";
+    } else if (col > 0 && col < input.length - 1) { 
+        if (input[col][input[0].length - 2] == "▉") {
+            output[col][input[0].length - 1] = "┻";
+        } else {
+            output[col][input[0].length - 1] = "━";
+        }  
+    }
+}
+\end{lstlisting}
+
+\end{document}

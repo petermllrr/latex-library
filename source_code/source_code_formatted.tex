@@ -1,0 +1,75 @@
+\documentclass{article}
+
+\usepackage{listings}
+\usepackage{xcolor}
+
+\begin{document}
+
+\section*{Properly formatted source code}
+
+\lstset{
+    basicstyle = \small\ttfamily,
+    keywordstyle = \color{magenta},
+    commentstyle = \color[rgb]{0, 0.6, 0},
+    identifierstyle = \color{black},
+    stringstyle = \color[rgb]{0.58, 0, 0.82},
+    numbers = left,
+    numberstyle = \small\ttfamily\color[rgb]{0.7, 0.7, 0.7},
+    showstringspaces = false,
+    frame = single
+}
+
+\begin{lstlisting}[language = java]
+class Example {
+    public static void main(String[] args) {
+        int i = 123;
+        /* A code example */
+    }
+}
+\end{lstlisting}
+
+\bigskip
+
+\noindent You can also load a source code file directly from a document or an
+URL:
+
+\bigskip
+
+\lstset{
+    basicstyle = \small\ttfamily,
+    backgroundcolor=\color[rgb]{0.95, 0.95, 0.97},
+    keywordstyle = \color{magenta},
+    commentstyle = \color[rgb]{0, 0.6, 0},
+    identifierstyle = \color{black},
+    stringstyle = \color[rgb]{0.58, 0, 0.82},
+    numbers = left,
+    numberstyle = \small\ttfamily\color[rgb]{0.7, 0.7, 0.7},
+    showstringspaces = false,
+    frame = single,
+    framerule = 0pt,
+}
+
+\lstinputlisting[language = Python]{./example_code/example.py}
+
+\bigskip
+
+\noindent To manually setup the font-size of the listings font, use this syntax: \\
+\lstinline[language = TeX]|basicstyle = \fontsize{9}{1.4em}\ttfamily|
+
+\bigskip
+
+\noindent You can use the \texttt{\textbackslash texttt\{...\}} command for
+quick inline code snippets without any highlighting. If you need syntax
+highlighting, use the \texttt{\textbackslash lstinline[]|...|} command. This
+will look like this: \lstinline[language = Java]|class Example {...}|
+
+\bigskip
+
+\noindent Find all available options in the documentation, page 6ff:
+
+\smallskip
+
+\noindent\small\texttt
+{https://ctan.math.illinois.edu/macros/latex/contrib/listings/listings.pdf}
+
+\end{document}

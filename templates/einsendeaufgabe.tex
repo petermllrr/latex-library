@@ -1,0 +1,102 @@
+\documentclass[11pt]{article}
+
+\usepackage{amsmath} % \usepackage[fleqn]{amsmath} for left aligning all equations
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage[ngerman]{babel}	
+\usepackage{csquotes}
+\usepackage{enumerate}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{newtxtext}
+\usepackage{newtxmath}
+\usepackage[headsepline]{scrlayer-scrpage}
+\usepackage{xcolor}
+
+\geometry{a4paper,
+	top = 30mm,
+	right = 25mm,
+	bottom = 30mm,
+	left = 25mm}
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1em}
+\ihead{Einsendeaufgaben Kurseinheit 1}
+\ohead{Max Mustermann (123456789)}
+\MakeOuterQuote{"}
+\lstset{basicstyle = \small\ttfamily,
+    backgroundcolor=\color[rgb]{0.95, 0.95, 0.97},
+    keywordstyle = \color{magenta},
+    commentstyle = \color[rgb]{0, 0.6, 0},
+    identifierstyle = \color{black},
+    stringstyle = \color[rgb]{0.58, 0, 0.82},
+    numbers = left,
+    numberstyle = \small\ttfamily\color[rgb]{0.7, 0.7, 0.7},
+    showstringspaces = false,
+    frame = single,
+    framerule = 0pt}
+\hypersetup{colorlinks = true,
+    linkcolor = blue,
+    filecolor = blue,      
+    urlcolor = blue}
+
+\begin{document}
+
+\section*{Template für Einsendeaufgaben}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec
+quam finibus, pharetra felis quis, pretium tortor. Etiam quis libero quam. Ut
+fringilla lectus non nulla dapibus, ac maximus orci iaculis. Proin lectus erat,
+luctus non neque eu, malesuada tempor massa. Aliquam erat volutpat. Fusce vitae
+consequat odio. Nulla eget ligula facilisis, mollis lacus non, eleifend ante.
+
+Sed vulputate sollicitudin erat, sit amet ultrices tortor suscipit sit amet.
+Nullam et enim et mauris malesuada rutrum vel quis dolor. Phasellus dapibus
+sollicitudin libero a luctus. Pellentesque habitant morbi tristique senectus et
+netus et malesuada fames ac turpis egestas. Suspendisse vel fringilla massa.
+Pellentesque luctus turpis at tellus auctor, id rutrum lorem viverra.
+
+\href{https://google.com}{Ein Textlink}
+
+\begin{align*}
+    f(x) &= a^2 + 2ab + b^2 \\
+         &= (a + b)^2
+\end{align*}
+
+\begin{flalign*}
+    f(x) &= a^2 + 2ab + b^2 & \\
+         &= (a + b)^2 &
+\end{flalign*}
+
+\begin{flalign*}
+   && a = b+c \\
+   && = 1+1 \\
+   && = 2  
+\end{flalign*}
+
+\bigskip
+
+\begin{lstlisting}[language = java]
+class Example {
+    public static void main(String[] args) {
+        int i = 123;
+        /* A code example */
+    }
+}
+\end{lstlisting}
+
+\begin{enumerate}[(a)]
+    \item
+    Aufzählung
+    \begin{enumerate}[(i)]
+        \item 
+        Unterpunkt
+        \item 
+        Unterpunkt
+    \end{enumerate}
+    \item
+    Aufzählung
+\end{enumerate}
+
+\end{document}
