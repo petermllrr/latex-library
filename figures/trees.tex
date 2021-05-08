@@ -1,0 +1,28 @@
+\documentclass{article}
+
+\usepackage{tikz}
+
+\usetikzlibrary{}
+
+\begin{document}
+
+\begin{tikzpicture}
+  [every node/.style = {draw, circle},
+  level 1/.style = {sibling distance = 10em},
+  level 2/.style = {sibling distance = 5em},
+  leaf/.style = {rectangle}]
+  \node{a}
+    child{node{b}
+      child{node[leaf]{c}}
+      child{node[leaf]{d}}
+    }
+    child{node{e}
+      child{node{f}
+        child{node[leaf]{g}}
+        child{node[leaf]{h}}
+      }
+      child{node[leaf]{i}}
+    };
+\end{tikzpicture}
+
+\end{document}
