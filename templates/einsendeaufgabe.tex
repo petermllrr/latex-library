@@ -23,8 +23,8 @@
   left = 25mm}
 \setlength{\parindent}{0em}
 \setlength{\parskip}{1em}
-\ihead{Einsendeaufgaben Kurseinheit 1}
-\ohead{Max Mustermann (123456789)}
+\ihead{Datenstrukturen – Einsendeaufgaben KE XXX}
+\ohead{Peter Müller (3274969)}
 \MakeOuterQuote{"}
 \lstset{basicstyle = \small\ttfamily,
   backgroundcolor=\color[rgb]{0.95, 0.95, 0.97},
@@ -45,14 +45,14 @@
   \stepcounter{section}
   \bigskip
   \begingroup\Large
-    \textbf{#1 \arabic{section}}
+    \textbf{Aufgabe \arabic{section} \hspace{1em} #1}
   \endgroup
   \smallskip}
 \renewcommand{\subsection}[1]{
     \stepcounter{subsection}
     \bigskip
     \begingroup\Large
-      \textbf{#1 \arabic{section}.\arabic{subsection}}
+      \textbf{Aufgabe \arabic{section}.\arabic{subsection} \hspace{1em} #1}
     \endgroup
     \smallskip}
 \setcounter{section}{0}
@@ -60,8 +60,20 @@
 
 \begin{document}
 
-\section{Aufgabe}
+\section{Überschrift}
 
-\subsection{Aufgabe}
+\begin{enumerate}[(a)]
+  \item \textcolor{red}{TODO}
+  \item \textcolor{red}{TODO}
+  \item \textcolor{red}{TODO}
+\end{enumerate}
+
+\section{Überschrift}
+
+\begin{enumerate}[(a)]
+  \item \textcolor{red}{TODO}
+  \item \textcolor{red}{TODO}
+  \item \textcolor{red}{TODO}
+\end{enumerate}
 
 \end{document}
