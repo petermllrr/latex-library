@@ -1,0 +1,35 @@
+\documentclass{article}
+
+\usepackage{minted}
+
+\begin{document}
+
+\section*{Source code formatted with the minted package}
+
+\noindent The \texttt{minted} packages gives you nicely formatted source code right without any manual styling neccessary:
+
+\begin{minted}{java}
+class Example {
+    public static void main(String[] args) {
+        int i = 123;
+        /* A code example */
+    }
+}
+\end{minted}
+
+\bigskip
+
+\noindent You can also load a source code file directly from a document or an
+URL:
+
+\inputminted{python}{./example_code/example.py}
+
+\bigskip
+
+\noindent You can use the \texttt{\textbackslash texttt\{...\}} command for quick inline code snippets without any highlighting. If you need syntax highlighting, use the \newline \mintinline[breaklines]{latex}{\mintinline{lang}{code}} command. By adding the breaklines option \newline \mintinline[breaklines]{latex}{\mintinline[breaklines]{lang}{code}} you can make sure that the code wraps over multiple lines.
+
+\bigskip
+
+\noindent The minted package depends on the helper program \texttt{pygments} to work properly. Because of this you need to compile your .tex file with the \texttt{-escape-shell} flag to work properly.
+
+\end{document}
