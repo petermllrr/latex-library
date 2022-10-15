@@ -1,0 +1,47 @@
+\documentclass{article}
+\usepackage{array}
+
+\begin{document}
+
+\section*{Tables}
+
+\vspace{1cm}
+
+\begin{tabular}{l | c | r}
+Header & Header & Header \\
+\hline
+This is a simple table. & You can align items. & But no paragraphs are allowed.
+\end{tabular}
+
+\vspace{1cm}
+
+\noindent
+\begin{tabular}{p{0.3\textwidth} | p{0.3\textwidth} | p{0.3\textwidth}}
+Header & Header & Header \\
+\hline
+You can also allow multiline paragraph content with the p flag. \newline \newline Use \texttt{\textbackslash newline} to insert a linebreak. This only works in paragraph mode. & You can align items. & But no paragraphs are allowed.
+\end{tabular}
+
+\vspace{1cm}
+
+\noindent
+\begin{tabular}{>{\raggedright}p{0.3\textwidth} | >{\raggedright}p{0.3\textwidth} | >{\raggedright \arraybackslash}p{0.3\textwidth}}
+Header & Header & Header \\
+\hline
+To make the text left aligned, use the \texttt{array} package. \newline \newline Don't forget to insert a \texttt{\textbackslash arraybackslash} at the last column. & You can align items. & But no paragraphs are allowed.
+\end{tabular}
+
+\vspace{1cm}
+
+\renewcommand*{\arraystretch}{2}
+
+\noindent
+\begin{tabular}{>{\raggedright}p{0.3\textwidth} | >{\raggedright}p{0.3\textwidth} | >{\raggedright \arraybackslash}p{0.3\textwidth}}
+Header & Header & Header \\
+\hline
+The vertical table padding can be controlled with the \texttt{\textbackslash arraystretch} command. & You can align items. & But no paragraphs are allowed.
+\end{tabular}
+
+
+
+\end{document}
