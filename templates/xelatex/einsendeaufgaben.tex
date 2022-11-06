@@ -1,18 +1,22 @@
-% Requires packages:
+% Required packages:
 % texlive texlive-xetex latexmk texlive-lang-german
 %
-% This example requires the font "Inter" from Google fonts:
+% Required fonts:
 % https://fonts.google.com/specimen/Inter?query=inter
+% https://fonts.google.com/specimen/JetBrains+Mono?query=jet
 %
-% Run
-% ./einsendeaufgaben-build.sh
-% to create a pdf
+% Build:
+% ./create-pdf.sh
 
 \documentclass{article}
 
 \usepackage{fontspec}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{unicode-math}
 \usepackage{geometry}
-\usepackage[ngerman]{babel}	
+\usepackage[ngerman]{babel}
 \usepackage{csquotes}
 \usepackage{graphicx}
 \usepackage{fancyhdr}
@@ -28,7 +32,12 @@
 \fancyhead[RO,RE]{}
 \title{XXXX Kursname - Einsendeaufgaben X}
 \author{Peter Müller - 3274969}
-\setmainfont{Inter}
+\setmainfont[
+  SlantedFont={Inter},
+  SlantedFeatures={FakeSlant=0.2},
+  BoldSlantedFeatures={FakeSlant=0.2},
+]{Inter}
+\setmonofont[Scale=0.9]{JetBrains Mono}
 
 \begin{document}
 

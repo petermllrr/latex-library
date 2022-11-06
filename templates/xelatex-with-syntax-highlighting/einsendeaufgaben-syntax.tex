@@ -1,19 +1,22 @@
-% Requires packages:
+% Required packages:
 % texlive texlive-xetex latexmk texlive-lang-german texlive-latex-extra python3-pygments 
 %
-% This example requires the font "Inter" and "Jet Brains Mono" from Google fonts:
+% Required fonts:
 % https://fonts.google.com/specimen/Inter?query=inter
 % https://fonts.google.com/specimen/JetBrains+Mono?query=jet
 %
-% Run
+% Build:
 % ./create-pdf.sh
-% to create a pdf
 
 \documentclass{article}
 
 \usepackage{fontspec}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{unicode-math}
 \usepackage{geometry}
-\usepackage[ngerman]{babel}	
+\usepackage[ngerman]{babel}
 \usepackage{csquotes}
 \usepackage{graphicx}
 \usepackage{fancyhdr}
@@ -30,7 +33,11 @@
 \fancyhead[RO,RE]{}
 \title{XXXX Kursname - Einsendeaufgaben X}
 \author{Peter Müller - 3274969}
-\setmainfont{Inter}
+\setmainfont[
+  SlantedFont={Inter},
+  SlantedFeatures={FakeSlant=0.2},
+  BoldSlantedFeatures={FakeSlant=0.2},
+]{Inter}
 \setmonofont[Scale=0.9]{JetBrains Mono}
 
 \begin{document}
@@ -46,6 +53,12 @@
 \section*{Aufgabe 1}
 
 Ein einfaches Template welches lokal installierte Schriften nutzt. Laut Definition in Abb. 2 sind je zwei Punkte durch eine Komposition mit einem Segment verbunden. Teilobjekte einer Komposition dürfen nur mit einem einzigen Ganzes-Objekt assoziiert sein. In unserem Beispiel bedeutet das, dass ein Punkt niemals mit zwei verschiedenen Segmenten assoziiert sein darf. \textit{Punkt 3} ist jedoch sowohl Teilobjekt von \textit{Segment 1} und \textit{Segment 3}. Um das Problem zu beheben, müssen wir einen weiteres Punktobjekt erschaffen, damit beide Segmente mit jeweils zwei disjunkten Punktobjekten assoziiert sind.
+
+\begin{align*}
+  & G' = (N, \Sigma, P, S) \; \symbf{mit}\\
+  & N = \{ S, A \} \\
+  & \Sigma = \{ (, a, b, ) \}
+\end{align*}
 
 \linespread{1}
 \begin{minted}{c}
