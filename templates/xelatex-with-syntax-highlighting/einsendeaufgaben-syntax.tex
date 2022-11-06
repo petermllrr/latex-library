@@ -1,0 +1,83 @@
+% Requires packages:
+% texlive texlive-xetex latexmk texlive-lang-german texlive-latex-extra python3-pygments 
+%
+% This example requires the font "Inter" and "Jet Brains Mono" from Google fonts:
+% https://fonts.google.com/specimen/Inter?query=inter
+% https://fonts.google.com/specimen/JetBrains+Mono?query=jet
+%
+% Run
+% ./create-pdf.sh
+% to create a pdf
+
+\documentclass{article}
+
+\usepackage{fontspec}
+\usepackage{geometry}
+\usepackage[ngerman]{babel}	
+\usepackage{csquotes}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{enumerate}
+\usepackage{minted}
+
+\geometry{a4paper,
+  top = 25mm,
+  left = 20mm,
+  bottom = 20mm,
+  right = 20mm}
+\pagestyle{fancy}
+\fancyhead[LO,LE]{XXXX Kursname - Einsendeaufgaben X}
+\fancyhead[RO,RE]{}
+\title{XXXX Kursname - Einsendeaufgaben X}
+\author{Peter Müller - 3274969}
+\setmainfont{Inter}
+\setmonofont[Scale=0.9]{JetBrains Mono}
+
+\begin{document}
+
+\setlength{\baselineskip}{1.5em}
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1em}
+
+\maketitle
+
+\newpage
+
+\section*{Aufgabe 1}
+
+Ein einfaches Template welches lokal installierte Schriften nutzt. Laut Definition in Abb. 2 sind je zwei Punkte durch eine Komposition mit einem Segment verbunden. Teilobjekte einer Komposition dürfen nur mit einem einzigen Ganzes-Objekt assoziiert sein. In unserem Beispiel bedeutet das, dass ein Punkt niemals mit zwei verschiedenen Segmenten assoziiert sein darf. \textit{Punkt 3} ist jedoch sowohl Teilobjekt von \textit{Segment 1} und \textit{Segment 3}. Um das Problem zu beheben, müssen wir einen weiteres Punktobjekt erschaffen, damit beide Segmente mit jeweils zwei disjunkten Punktobjekten assoziiert sind.
+
+\linespread{1}
+\begin{minted}{c}
+int gettoken()
+{
+    int c;
+    state = 0;
+    start_state = 0;
+    while (TRUE) {
+        switch (state) {
+        case 11: c = nextchar();
+                    if isdigit(c)      state = 12;
+                    else if issign(c)  state = 13;
+                    else               state = next_diagram();
+                    break;
+        case 12: c = nextchar();
+                    if isdigit(c);     state = 12;
+                    else               state = 14;
+                    break;
+        case 13: c = nextchar();
+                    if isdigit(c)      state = 12;
+                    else               state = next_diagram();
+                    break;
+        case 14: c = nextchar();
+                    if isdigit(c)      state = 15;
+                    if (c == 'E')      state = 17;
+                    else               state = 16;
+                    break;
+    }
+};
+\end{minted}
+
+Ein einfaches Template welches lokal installierte Schriften nutzt. Laut Definition in Abb. 2 sind je zwei Punkte durch eine Komposition mit einem Segment verbunden. Teilobjekte einer Komposition dürfen nur mit einem einzigen Ganzes-Objekt assoziiert sein. In unserem Beispiel bedeutet das, dass ein Punkt niemals mit zwei verschiedenen Segmenten assoziiert sein darf. \textit{Punkt 3} ist jedoch sowohl Teilobjekt von \textit{Segment 1} und \textit{Segment 3}. Um das Problem zu beheben, müssen wir einen weiteres Punktobjekt erschaffen, damit beide Segmente mit jeweils zwei disjunkten Punktobjekten assoziiert sind.
+
+\end{document}

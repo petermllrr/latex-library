@@ -1,0 +1,47 @@
+% Requires packages:
+% texlive texlive-xetex latexmk texlive-lang-german
+%
+% This example requires the font "Inter" from Google fonts:
+% https://fonts.google.com/specimen/Inter?query=inter
+%
+% Run
+% ./einsendeaufgaben-build.sh
+% to create a pdf
+
+\documentclass{article}
+
+\usepackage{fontspec}
+\usepackage{geometry}
+\usepackage[ngerman]{babel}	
+\usepackage{csquotes}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{enumerate}
+
+\geometry{a4paper,
+  top = 25mm,
+  left = 20mm,
+  bottom = 20mm,
+  right = 20mm}
+\pagestyle{fancy}
+\fancyhead[LO,LE]{XXXX Kursname - Einsendeaufgaben X}
+\fancyhead[RO,RE]{}
+\title{XXXX Kursname - Einsendeaufgaben X}
+\author{Peter Müller - 3274969}
+\setmainfont{Inter}
+
+\begin{document}
+
+\setlength{\baselineskip}{1.5em}
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1em}
+
+\maketitle
+
+\newpage
+
+\section*{Aufgabe 1}
+
+Ein einfaches Template welches lokal installierte Schriften nutzt.
+
+\end{document}
